@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const ingredients = require('./ingredients.model');
+//const ingredients = require('./ingredients.model');
 const orderItemSchema=new mongoose.Schema({
     food:{
         type:mongoose.Schema.Types.ObjectId,

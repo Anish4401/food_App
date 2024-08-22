@@ -24,6 +24,9 @@ app.use('/',homeRoutes)
 //import auth routes
 const authRoute=require('../src/Router/authRouter')
 app.use('/auth',authRoute)
+//import user routes
+const userRoute=require('../src/Router/userRoutes')
+app.use('/user',userRoute)
 
 module.exports={app}
 function StartServer() {

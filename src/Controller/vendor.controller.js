@@ -13,6 +13,18 @@ module.exports={
             res.status(400).json({message:error.message});
          }
       },
+      //find vendor by name
+      findVendorByName:async(req,res)=>{
+         try{
+            const {name}=req.params;
+            if(!name){
+               return res.status(400).json({message:"Please provide the name"});}
+            const vendor=await vendorService.findVendorByName(name);
+                res.status(200).json(vendor);}
+            catch(error){
+               res.status(500).json({message:"internal Server error"});
+            }},
+
       async deleteVendorById(){
          try{
             const{id}=req.params;
